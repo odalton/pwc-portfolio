@@ -1,0 +1,58 @@
+{% load static %}<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Perth Web Company</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="image/png"
+			  href="{% static "/images/favicon.ico" %}"/>
+		<link rel="stylesheet" href="{% static "/css/main.css" %}" />
+	</head>
+	<body class="is-preload">
+
+		<section id="menu">
+			<ul>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</section>
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Perth Web Company</h1>
+			<p>New website coming soon to the world. Signup and we will let<br/>
+				you know when it launches.</p>
+			<!--<p>A simple template for telling the world when you'll launch<br />-->
+			<!--your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p>-->
+		</header>
+
+		<!-- Signup Form -->
+		<form id="signup-form" method="post">
+			{% csrf_token %}
+			{{form}}
+			{{form.errors}}
+			<input type="submit" value="Sign Up" />
+		</form>
+
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<!--<ul class="icons">-->
+				<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+				<!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+				<!--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>-->
+				<!--<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>-->
+			<!--</ul>-->
+			<ul class="copyright">
+				<li>&copy; Perth Web Company.</li>
+			</ul>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src="{% static "/js/main.js" %}"></script>
+
+	</body>
+</html>

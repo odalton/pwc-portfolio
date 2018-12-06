@@ -1,0 +1,9 @@
+venv/*
+.idea/*
+node_modules/*
+
+.DS_Store
+.DS_Store?
+
+# Ignore this
+src/src/settings_secret.py
